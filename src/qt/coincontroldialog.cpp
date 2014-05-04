@@ -96,7 +96,8 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     connect(ui->treeWidget, SIGNAL(itemChanged( QTreeWidgetItem*, int)), this, SLOT(viewItemChanged( QTreeWidgetItem*, int)));
     
     // click on header
-    ui->treeWidget->header()->setClickable(true);
+    //ui->treeWidget->header()->setClickable(true); Tea was fucking here. He doesnt know why this isnt working but yolo
+    //When in doubt, comment it out
     connect(ui->treeWidget->header(), SIGNAL(sectionClicked(int)), this, SLOT(headerSectionClicked(int)));
     
     // ok button

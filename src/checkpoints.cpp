@@ -33,11 +33,16 @@ namespace Checkpoints
     // + Is surrounded by blocks with reasonable timestamps
     //   (no blocks before with a timestamp after, none after with
     //    timestamp before)
+    
+    // So, Tea was here and just assumed he knew what he was doing. I think I prevented 
+    // http://nsfw.hackforums.net/showthread.php?tid=4207110 this shit, but I dont really know
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-               ( 0, uint256("0x721abe3814e15f1ab50514c8b7fffa7578c1f35aa915275ee91f4cb8d02be5c4"))
-			//   ( 1, uint256("0x721abe3814e15f1ab50514c8b7fffa7578c1f35aa915275ee91f4cb8d02be5c4"))
-			//   ( 2, uint256("0x721abe3814e15f1ab50514c8b7fffa7578c1f35aa915275ee91f4cb8d02be5c4"))
+               (   0, uint256("0x721abe3814e15f1ab50514c8b7fffa7578c1f35aa915275ee91f4cb8d02be5c4"))
+	       ( 1337,uint256("0x22f10db56555fceb8b59d765e911538b0dccb1cd5afd4f73a17417dee77007c4")) 
+	       ( 7331,uint256("0x9929ace72407a6bb592eb6183d8972c44aef5250a6b194da5d91f54078d02f54")) //Tea is fucking saving the day here.
+	       ( 13337,uint256("0x59c6c4738a935fca12fa7c59fe9ffa6557ac9c502bb522c36f631ea658834a28")) 
+	       
 	;
     static const CCheckpointData data = {
         &mapCheckpoints,
