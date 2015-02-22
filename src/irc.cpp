@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2011-2012 OmniCoin Developers
+// Copyright (c) 2011-2012 Omnicoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -190,7 +190,7 @@ bool GetIPFromIRC(SOCKET hSocket, string strMyName, CNetAddr& ipRet)
 void ThreadIRCSeed()
 {
     // Make this thread recognisable as the IRC seeding thread
-    RenameThread("OmniCoin-ircseed");
+    RenameThread("Omnicoin-ircseed");
 
     try
     {
@@ -301,16 +301,16 @@ void ThreadIRCSeed2()
         }
         
         if (fTestNet) {
-            Send(hSocket, "JOIN #OmniCoinTEST0\r");
-            Send(hSocket, "WHO #OmniCoinTEST0\r");
+            Send(hSocket, "JOIN #OmnicoinTEST0\r");
+            Send(hSocket, "WHO #OmnicoinTEST0\r");
         } else {
-            // randomly join #OmniCoin00-#OmniCoin99
+            // randomly join #Omnicoin00-#Omnicoin99
             // network is now over 3k peers , get them to join 50 random channels!
             //            channel_number = 0; 
             int channel_number = 0; //GetRandInt(50);
 
-            Send(hSocket, strprintf("JOIN #OmniCoin%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #OmniCoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("JOIN #Omnicoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #Omnicoin%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();
